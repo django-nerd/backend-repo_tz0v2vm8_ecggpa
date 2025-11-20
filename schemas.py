@@ -11,10 +11,11 @@ Model name is converted to lowercase for the collection name:
 - BlogPost -> "blogs" collection
 """
 
-from pydantic import BaseModel, Field
-from typing import Optional
+from pydantic import BaseModel, Field, HttpUrl
+from typing import Optional, List
+from datetime import date
 
-# Example schemas (replace with your own):
+# Example schemas (retain for reference):
 
 class User(BaseModel):
     """
@@ -38,11 +39,46 @@ class Product(BaseModel):
     category: str = Field(..., description="Product category")
     in_stock: bool = Field(True, description="Whether product is in stock")
 
-# Add your own schemas here:
-# --------------------------------------------------
+# Job portal schemas
 
-# Note: The Flames database viewer will automatically:
-# 1. Read these schemas from GET /schema endpoint
-# 2. Use them for document validation when creating/editing
-# 3. Handle all database operations (CRUD) directly
-# 4. You don't need to create any database endpoints!
+class Company(BaseModel):
+    """
+    Companies collection
+    Collection name: "company"
+    """
+    name: str
+    logo_url: Optional[HttpUrl] = None
+    website: Optional[HttpUrl] = None
+    tagline: Optional[str] = None
+    spotlight: bool = False
+    accent_color: Optional[str] = Field(None, description="Hex color for UI accents")
+
+class Category(BaseModel):
+    """
+    Job categories
+    Collection name: "category"
+    """
+    slug: str
+    title: str
+    emoji: Optional[str] = None
+    description: Optional[str] = None
+
+class Job(BaseModel):
+    """
+    Jobs collection
+    Collection name: "job"
+    """
+    title: str
+    company: str = Field(..., description="Company name")
+    category: str = Field(..., description="Category slug")
+    location: str = Field(..., description="City/Country or Remote")
+    remote: bool = True
+    type: str = Field(..., description="Full-time, Part-time, Internship, Contract")
+    salary_min: Optional[int] = None
+    salary_max: Optional[int] = None
+    currency: str = "USD"
+    description: Optional[str] = None
+    requirements: Optional[List[str]] = None
+    apply_url: Optional[HttpUrl] = None
+    featured: bool = False
+    posted_on: Optional[date] = None
