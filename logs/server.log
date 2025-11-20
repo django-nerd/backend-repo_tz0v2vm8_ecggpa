@@ -1,19 +1,19 @@
 INFO:     Will watch for changes in these directories: ['/home/workspace']
 INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-INFO:     Started reloader process [152] using StatReload
-INFO:     Started server process [154]
+INFO:     Started reloader process [202] using StatReload
+INFO:     Started server process [204]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
-INFO:     172.20.0.1:36368 - "HEAD / HTTP/1.1" 405 Method Not Allowed
-INFO:     172.20.0.1:36370 - "GET /api/companies?spotlight=true HTTP/1.1" 200 OK
-INFO:     172.20.0.1:36384 - "GET /api/jobs?remote=true&featured=true HTTP/1.1" 200 OK
-INFO:     172.20.0.1:36406 - "GET /api/companies?spotlight=true HTTP/1.1" 200 OK
-INFO:     172.20.0.1:36370 - "GET /api/jobs?remote=true&featured=true HTTP/1.1" 200 OK
-INFO:     172.20.0.1:36394 - "GET /api/categories HTTP/1.1" 200 OK
-INFO:     172.20.0.1:36370 - "GET /api/categories HTTP/1.1" 200 OK
-INFO:     172.20.0.1:54472 - "GET /api/categories HTTP/1.1" 200 OK
-INFO:     172.20.0.1:54486 - "GET /api/companies?spotlight=true HTTP/1.1" 200 OK
-INFO:     172.20.0.1:54464 - "GET /api/jobs?remote=true&featured=true HTTP/1.1" 200 OK
-INFO:     172.20.0.1:54472 - "GET /api/categories HTTP/1.1" 200 OK
-INFO:     172.20.0.1:54486 - "GET /api/companies?spotlight=true HTTP/1.1" 200 OK
-INFO:     172.20.0.1:54464 - "GET /api/jobs?remote=true&featured=true HTTP/1.1" 200 OK
+INFO:     172.20.0.1:34008 - "HEAD / HTTP/1.1" 405 Method Not Allowed
+INFO:     172.20.0.1:34014 - "GET /api/companies?spotlight=true HTTP/1.1" 200 OK
+INFO:     172.20.0.1:34028 - "GET /api/categories HTTP/1.1" 200 OK
+INFO:     172.20.0.1:34042 - "GET /api/companies?spotlight=true HTTP/1.1" 200 OK
+INFO:     172.20.0.1:34014 - "GET /api/categories HTTP/1.1" 200 OK
+INFO:     172.20.0.1:49614 - "GET /api/categories HTTP/1.1" 200 OK
+INFO:     172.20.0.1:49622 - "GET /api/companies?spotlight=true HTTP/1.1" 200 OK
+INFO:     172.20.0.1:54272 - "GET /api/categories HTTP/1.1" 200 OK
+INFO:     172.20.0.1:49614 - "GET /api/companies?spotlight=true HTTP/1.1" 200 OK
+INFO:     172.20.0.1:54292 - "GET /api/companies?spotlight=true HTTP/1.1" 200 OK
+INFO:     172.20.0.1:54276 - "GET /api/categories HTTP/1.1" 200 OK
+INFO:     172.20.0.1:54292 - "GET /api/categories HTTP/1.1" 200 OK
+INFO:     172.20.0.1:54306 - "GET /api/companies?spotlight=true HTTP/1.1" 200 OK
